@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav .active {
+    color: blue;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    background-color: black;
+    padding: 15px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}

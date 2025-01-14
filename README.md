@@ -6,5 +6,5 @@ Creiamo il frontend del nostro Blog e le sue pagine!
 - Implementiamo una navbar in comune a tutte le pagine per poter navigare tra loro ✅
 
 **Bonus**
-- Centralizzare la Navbar grazie a un Layout
-- Gestire la classe *active*
+- Centralizzare la Navbar grazie a un Layout ✅
+- Gestire la classe *active* ✅
