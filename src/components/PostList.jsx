@@ -1,12 +1,20 @@
-function PostList() {
+import Card from "./Card";
+
+function PostList( {posts, apiUrl} ) {
     return (
         <>
-        <main>
-            <h2>Scorrimento dei post</h2>
-            <div>Post numero 1</div>
-            <div>Post numero 2</div>
-            <div>Post numero 3</div>
-        </main>
+            <main>
+                <section>
+                    <h2>I nostri post</h2>
+                    <div className="row row-cols-2 row-cols-lg-3">
+                        {posts.map((curPost) => (
+                            <div className="col" key={curPost.id}>
+                                <Card curPost={curPost} apiUrl={apiUrl}  />
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </main>
         </>
     )
 }

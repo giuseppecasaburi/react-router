@@ -15,6 +15,14 @@ function NavBar() {
         {
             path: "/contacts",
             title: "Contacts"
+        },
+        {
+            path: "/detailpost",
+            title: "Dettagli del post"
+        },
+        {
+            path: "/newpostpage",
+            title: "Crea nuovo post"
         }
     ]
 
