@@ -45,7 +45,7 @@ function App() {
             <Route path="/Postlist" element={<PostList posts={posts} apiUrl={apiUrl} deletePost={deletePost}/>} />
             <Route path="/Contacts" element={<Contacts />} />
             <Route path="/detailpost/:id" element={<DetailPost posts={posts} />} />
-            <Route path="/newpostpage" element={<NewPostPage />} />
+            <Route path="/newpostpage" element={<NewPostPage apiUrl={apiUrl} posts={posts} setPosts={setPosts} />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -22,7 +22,6 @@ function Card({ post, apiUrl, deletePost }) {
                 </button>
             </div>
         </div>
-
     )
 }
 
