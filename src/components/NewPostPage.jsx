@@ -19,7 +19,7 @@ function NewPostPage({ apiUrl, posts, setPosts }) {
         event.preventDefault();
 
         axios.post(`${apiUrl}/posts`, formData).then((resp) => {
-            
+
             const newPost = resp.data
             const newArray = [...posts, newPost]; // Creo un nuovo array dove unisco il vecchio al nuovo elemento
 
