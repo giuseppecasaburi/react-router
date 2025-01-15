@@ -26,15 +26,25 @@ function App() {
     })
   }
 
+  // Funzione per gestire la cancellazione dei post
+  const deletePost = (id) => {                                  // CHIEDERE ID //
+    axios.delete(`${apiUrl}/posts/${id}`).then((resp) => {
+      console.log(resp);
+      const updatedPosts = posts.filter((post) => post.id !== id);
+      setPosts(updatedPosts);
+    })
+  }
+ 
+
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
             <Route path="/" element={<Home />} />
-            <Route path="/Postlist" element={<PostList posts={posts} apiUrl={apiUrl}/>} />
+            <Route path="/Postlist" element={<PostList posts={posts} apiUrl={apiUrl} deletePost={deletePost}/>} />
             <Route path="/Contacts" element={<Contacts />} />
-            <Route path="/detailpost" element={<DetailPost />} />
+            <Route path="/detailpost/:id" element={<DetailPost posts={posts} />} />
             <Route path="/newpostpage" element={<NewPostPage />} />
           </Route>
         </Routes>
